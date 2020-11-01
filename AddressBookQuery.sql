@@ -33,10 +33,14 @@ Update address_book set PhoneNo = '5555555555' where First_Name = 'Riya' and Las
 --Delete contact in table--
 Delete from address_book where First_Name = 'Riya' and Last_Name = 'Sharma';
 
---Get contact By state Or city--
+--Get contact By state or city--
 select * from address_book where city = 'Mumbai';
 select * from address_book where state = 'Karnataka';
 
 --Get count of contacts by city Or state--
 select city,count(first_name) from address_book group by city;
 select state,count(first_name) from address_book group by state;
+
+--Sort by name for a given city --
+select * from address_book where city = 'Mumbai' order by First_Name;
+select * from address_book where city = 'Bangalore' order by First_Name;
