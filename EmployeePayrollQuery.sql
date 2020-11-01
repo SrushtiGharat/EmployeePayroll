@@ -23,3 +23,6 @@ insert into employee_payroll values
 --Retrieve all values from table--
 select * from employee_payroll
 
+--Retrieve values based on conditions--
+select salary from employee_payroll where name = 'Bill'
+select * from employee_payroll where start_date between '2018-01-01' and GETDATE();
