@@ -26,3 +26,9 @@ insert into address_book values
 ('Shyam','Patil','20-Shastri Nagar','Bangalore','Karnataka','500303','7777777777','shyampatil@gmail.com');
 
 select * from address_book;
+
+--Update Contact in table--
+
+Update address_book set PhoneNo = '5555555555' where First_Name = 'Riya' and Last_Name = 'Sharma'; 
+
+select * from address_book;
