@@ -27,13 +27,16 @@ insert into address_book values
 
 select * from address_book;
 
---Update Contact in table--
+--Update contact in table--
 Update address_book set PhoneNo = '5555555555' where First_Name = 'Riya' and Last_Name = 'Sharma'; 
 
---Delete Contact in table--
+--Delete contact in table--
 Delete from address_book where First_Name = 'Riya' and Last_Name = 'Sharma';
 
---Get Contact By State Or City--
+--Get contact By state Or city--
 select * from address_book where city = 'Mumbai';
 select * from address_book where state = 'Karnataka';
 
+--Get count of contacts by city Or state--
+select city,count(first_name) from address_book group by city;
+select state,count(first_name) from address_book group by state;
