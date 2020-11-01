@@ -26,3 +26,11 @@ select * from employee_payroll
 --Retrieve values based on conditions--
 select salary from employee_payroll where name = 'Bill'
 select * from employee_payroll where start_date between '2018-01-01' and GETDATE();
+
+--Add a gender column to table--
+Alter table employee_payroll add Gender char;
+
+Update employee_payroll set gender = 'M' where name = 'Bill' or name = 'Charlie';
+Update employee_payroll set gender = 'F' where name = 'Terissa';
+
+Select * from employee_payroll;
