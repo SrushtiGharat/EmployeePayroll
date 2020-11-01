@@ -28,7 +28,7 @@ insert into address_book values
 select * from address_book;
 
 --Update Contact in table--
-
 Update address_book set PhoneNo = '5555555555' where First_Name = 'Riya' and Last_Name = 'Sharma'; 
 
-select * from address_book;
+--Delete Contact in table--
+Delete from address_book where First_Name = 'Riya' and Last_Name = 'Sharma';
