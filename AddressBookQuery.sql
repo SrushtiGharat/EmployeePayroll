@@ -32,3 +32,8 @@ Update address_book set PhoneNo = '5555555555' where First_Name = 'Riya' and Las
 
 --Delete Contact in table--
 Delete from address_book where First_Name = 'Riya' and Last_Name = 'Sharma';
+
+--Get Contact By State Or City--
+select * from address_book where city = 'Mumbai';
+select * from address_book where state = 'Karnataka';
+
