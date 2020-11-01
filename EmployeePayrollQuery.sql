@@ -34,3 +34,10 @@ Update employee_payroll set gender = 'M' where name = 'Bill' or name = 'Charlie'
 Update employee_payroll set gender = 'F' where name = 'Terissa';
 
 Select * from employee_payroll;
+
+--Use SUM,AVG,MAX,MIN,COUNT operations--
+select gender,SUM(salary) as sum from employee_payroll  group by gender;
+select gender,AVG(salary) as avg from employee_payroll group by gender;
+select gender,MIN(salary) as min from employee_payroll group by gender;
+select gender,MAX(salary) as max from employee_payroll group by gender;
+select gender,COUNT(gender) as count from employee_payroll group by gender;
