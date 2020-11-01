@@ -16,3 +16,13 @@ email varchar(20) not null
 )
 
 select * from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME = 'address_book';
+
+--Insert values in table--
+insert into address_book values
+('Ram','Singh','23-River Park','Mumbai','Maharashtra','400500','9999999999','ramsingh@gmail.com'),
+('Ravi','Pandey','17-Orchids Colony','Bangalore','Karnataka','500300','8888888888','ravipandey@gmail.com'),
+('Seeta','Yadav','02-Green Tower','Mumbai','Maharashtra','400503','6666666666','seetasingh@gmail.com'),
+('Riya','Sharma','32-Street Road','Hyderabad','Telangana','300200','444444444','riyasharma@gmail.com'),
+('Shyam','Patil','20-Shastri Nagar','Bangalore','Karnataka','500303','7777777777','shyampatil@gmail.com');
+
+select * from address_book;
