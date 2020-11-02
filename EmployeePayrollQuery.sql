@@ -33,7 +33,7 @@ Alter table employee_payroll add Gender char;
 Update employee_payroll set gender = 'M' where name = 'Bill' or name = 'Charlie';
 Update employee_payroll set gender = 'F' where name = 'Terissa';
 
-Select * from employee_payroll;
+Select * employee_payroll;
 
 --Use SUM,AVG,MAX,MIN,COUNT operations--
 select gender,SUM(salary) as sum from employee_payroll  group by gender;
