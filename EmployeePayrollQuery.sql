@@ -57,3 +57,9 @@ Alter table employee_payroll  alter column department varchar(20) not null
 --Add BasicPay,Decductions,TaxablePay,IncomeTax and NetPay columns--
 sp_rename 'employee_payroll.salary', 'basic_pay';
 alter table employee_payroll add deduction money,taxable_pay money,income_tax money,net_pay money;
+
+--Make Terissa part of sales and marketing department--
+insert into employee_payroll (name,basic_pay,start_date,gender,phone,department,address) values
+('Terissa','200000.00','2019-11-13','F','999999999','Sales','Delhi');
+
+select * from employee_payroll;
