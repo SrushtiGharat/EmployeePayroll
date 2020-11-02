@@ -44,3 +44,10 @@ select state,count(first_name) from address_book group by state;
 --Sort by name for a given city --
 select * from address_book where city = 'Mumbai' order by First_Name;
 select * from address_book where city = 'Bangalore' order by First_Name;
+
+--Add addressbook name and type column--
+alter table address_book add addressbook_name varchar(20), type varchar(20);
+
+update address_book set addressbook_name = 'Book1',type = 'Family' where First_Name = 'Seeta' or First_Name = 'Ram';
+update address_book set addressbook_name = 'Book2',type = 'Friend' where First_Name = 'Ravi';
+update address_book set addressbook_name = 'Book3',type = 'Profession' where First_Name = 'Shyam';
