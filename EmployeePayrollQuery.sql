@@ -33,7 +33,7 @@ Alter table employee_payroll add Gender char;
 Update employee_payroll set gender = 'M' where name = 'Bill' or name = 'Charlie';
 Update employee_payroll set gender = 'F' where name = 'Terissa';
 
-Select * employee_payroll;
+Select * from employee_payroll;
 
 --Use SUM,AVG,MAX,MIN,COUNT operations--
 select gender,SUM(salary) as sum from employee_payroll  group by gender;
@@ -41,3 +41,15 @@ select gender,AVG(salary) as avg from employee_payroll group by gender;
 select gender,MIN(salary) as min from employee_payroll group by gender;
 select gender,MAX(salary) as max from employee_payroll group by gender;
 select gender,COUNT(gender) as count from employee_payroll group by gender;
+
+--Add phone_no,address and department columns--
+Alter table employee_payroll add phone varchar(15)
+Alter table employee_payroll add department varchar(20)
+Alter table employee_payroll add address varchar(100)
+Alter table employee_payroll add constraint df_address default 'India' for address
+
+Update employee_payroll set phone = '888888888', department = 'Sales',address = 'Mumbai' where name = 'Bill'
+Update employee_payroll set phone = '999999999', department = 'Marketing',address = 'Delhi' where name = 'Terissa'
+Update employee_payroll set phone = '777777777', department = 'Finance',address = 'Bangalore' where name = 'Charlie'
+
+Alter table employee_payroll  alter column department varchar(20) not null
