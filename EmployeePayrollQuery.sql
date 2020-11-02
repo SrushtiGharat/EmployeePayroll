@@ -53,3 +53,7 @@ Update employee_payroll set phone = '999999999', department = 'Marketing',addres
 Update employee_payroll set phone = '777777777', department = 'Finance',address = 'Bangalore' where name = 'Charlie'
 
 Alter table employee_payroll  alter column department varchar(20) not null
+
+--Add BasicPay,Decductions,TaxablePay,IncomeTax and NetPay columns--
+sp_rename 'employee_payroll.salary', 'basic_pay';
+alter table employee_payroll add deduction money,taxable_pay money,income_tax money,net_pay money;
